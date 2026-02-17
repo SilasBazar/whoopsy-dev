@@ -1,8 +1,13 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Menu, X, ArrowRight, Zap, Target, Skull, Terminal, Crosshair, Cpu } from 'lucide-react';
 
 const App = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  useEffect(() => {
+    // Ensuring the background is set correctly on load
+    document.body.style.backgroundColor = '#080808';
+  }, []);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
